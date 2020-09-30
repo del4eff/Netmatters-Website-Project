@@ -2,7 +2,7 @@
 
 @media (max-width: 576px) {
     .service-list {
-        max-width: 100%;
+        max-width: 550px;
         .row {
             display: flex;
             flex-direction: column;
@@ -12,12 +12,6 @@
         }
     }
     #banner .content {
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 576px) {
-    .container {
         max-width: 100%;
     }
 }
@@ -106,6 +100,20 @@
 }
 
 @media (min-width: 1200px) {
+    .article-list {
+        .d-lg-none {
+            display: none!important;
+            position: absolute;
+        }
+        .col-lg-6 {            
+            flex: 0 0 50%;
+            max-width: 50%;
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 1260px) and (min-width: 1200px) {
     .service-list .row .col-xl-3 {
         flex: 0 0 50%;
         max-width: 50%;
@@ -133,11 +141,11 @@
             }
         }
     }
-    .clients .list .item img {
+    .clients .list .item {
         height: auto;
         width: 100%;                        //giving the list items height and width to take up all the space
     }
-    .accreditations .list .item img {
+    .accreditations .list .item {
         height: auto;
         width: 100%;
     }
@@ -161,5 +169,13 @@
     }
     .service-list .it p::after {
         content: '\00000A';
+    }
+}
+
+@media (max-width: 1259px) {
+    .clients .list .item img,
+    .accreditations .list .item img {
+        height: auto;
+        width: 100%;
     }
 }

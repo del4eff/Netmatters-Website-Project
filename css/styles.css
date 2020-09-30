@@ -10366,6 +10366,7 @@ header .inner {
 }
 .service-list .block h2 {
   font-size: 1.125rem;
+  text-transform: capitalize;
   position: relative;
   padding-bottom: 17px;
   margin: 0 0 11px;
@@ -10890,7 +10891,7 @@ footer .social-media .lin:hover {
 
 @media (max-width: 576px) {
   .service-list {
-    max-width: 100%;
+    max-width: 550px;
   }
   .service-list .row {
     display: flex;
@@ -10901,11 +10902,6 @@ footer .social-media .lin:hover {
   }
 
   #banner .content {
-    max-width: 100%;
-  }
-}
-@media (min-width: 576px) {
-  .container {
     max-width: 100%;
   }
 }
@@ -10997,6 +10993,17 @@ footer .social-media .lin:hover {
   }
 }
 @media (min-width: 1200px) {
+  .article-list .d-lg-none {
+    display: none !important;
+    position: absolute;
+  }
+  .article-list .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    width: 50%;
+  }
+}
+@media (max-width: 1260px) and (min-width: 1200px) {
   .service-list .row .col-xl-3 {
     flex: 0 0 50%;
     max-width: 50%;
@@ -11024,12 +11031,12 @@ footer .social-media .lin:hover {
     width: 240px;
   }
 
-  .clients .list .item img {
+  .clients .list .item {
     height: auto;
     width: 100%;
   }
 
-  .accreditations .list .item img {
+  .accreditations .list .item {
     height: auto;
     width: 100%;
   }
@@ -11055,6 +11062,13 @@ footer .social-media .lin:hover {
 
   .service-list .it p::after {
     content: "\a";
+  }
+}
+@media (max-width: 1259px) {
+  .clients .list .item img,
+.accreditations .list .item img {
+    height: auto;
+    width: 100%;
   }
 }
 
