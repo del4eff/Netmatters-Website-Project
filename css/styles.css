@@ -10905,6 +10905,11 @@ footer .social-media .lin:hover {
     max-width: 100%;
   }
 }
+@media (max-width: 767px) and (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
 @media (max-width: 767px) {
   #banner {
     text-align: center;
@@ -11062,13 +11067,6 @@ footer .social-media .lin:hover {
 
   .service-list .it p::after {
     content: "\a";
-  }
-}
-@media (max-width: 1259px) {
-  .clients .list .item img,
-.accreditations .list .item img {
-    height: auto;
-    width: 100%;
   }
 }
 

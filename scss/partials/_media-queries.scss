@@ -16,6 +16,12 @@
     }
 }
 
+@media (max-width: 767px) and (min-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 767px) {
     #banner {
         text-align: center;
@@ -169,13 +175,5 @@
     }
     .service-list .it p::after {
         content: '\00000A';
-    }
-}
-
-@media (max-width: 1259px) {
-    .clients .list .item img,
-    .accreditations .list .item img {
-        height: auto;
-        width: 100%;
     }
 }
