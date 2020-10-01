@@ -9894,11 +9894,19 @@ h3 {
   }
 }
 /*--- Actions Menu ---*/
+.logo img {
+  width: 100%;
+}
+
 .actions {
+  display: flex;
   padding: 7px 0;
 }
 .actions > * + * {
   margin-left: 20px;
+}
+.actions a {
+  width: 100%;
 }
 .actions svg:not(.bi-search) {
   margin: 8px 12px 0 -4px;
@@ -9920,7 +9928,6 @@ h3 {
 .actions .input-group-append .btn {
   background-color: #999aa2;
   border-color: #999aa2;
-  width: 3.5rem;
 }
 .actions .input-group-append .btn svg {
   margin: 0 0 5px 0;
@@ -9930,11 +9937,9 @@ h3 {
   border-color: #7e808a;
 }
 .actions .burger {
-  display: block;
   position: relative;
   background: #333645;
   height: 3.5rem;
-  width: 4rem;
   z-index: 1;
   border-radius: 3px;
 }
@@ -10111,6 +10116,10 @@ header .inner {
 .row::after, .row::before {
   content: " ";
   display: table;
+}
+
+.row-eq-height {
+  display: flex;
 }
 
 .col-xs-1,
@@ -10997,19 +11006,14 @@ footer .social-media .lin:hover {
     min-height: 66px;
   }
 }
-@media (min-width: 1200px) {
-  .article-list .d-lg-none {
-    display: none !important;
-    position: absolute;
-  }
-  .article-list .col-lg-6 {
+@media (max-width: 1260px) and (min-width: 1200px) {
+  .service-list .row .col-xl-3 {
     flex: 0 0 50%;
     max-width: 50%;
     width: 50%;
   }
-}
-@media (max-width: 1260px) and (min-width: 1200px) {
-  .service-list .row .col-xl-3 {
+
+  .article-list .row .col-xl-4 {
     flex: 0 0 50%;
     max-width: 50%;
     width: 50%;
@@ -11028,7 +11032,6 @@ footer .social-media .lin:hover {
 
   .actions {
     width: 94%;
-    float: right;
   }
   .actions .input-group .form-control {
     display: block;
@@ -11045,12 +11048,12 @@ footer .social-media .lin:hover {
     height: auto;
     width: 100%;
   }
+
+  .article-list .row .col-xl-4 {
+    display: block !important;
+  }
 }
 @media (max-width: 1260px) and (min-width: 992px) {
-  .actions {
-    float: right;
-  }
-
   .input-group {
     width: 56px;
   }
@@ -11063,10 +11066,6 @@ footer .social-media .lin:hover {
 
   #banner {
     text-align: left;
-  }
-
-  .service-list .it p::after {
-    content: "\a";
   }
 }
 

@@ -1,9 +1,18 @@
 /*--- Actions Menu ---*/
+.logo {
+    img {
+        width: 100%;
+    }
+}
 
-.actions { 
+.actions {
+    display: flex;
     padding: 7px 0;
     > * + * {
         margin-left: 20px;
+    }
+    a {
+        width: 100%;
     }
     svg:not(.bi-search) {
         margin: 8px 12px 0 -4px;
@@ -26,7 +35,6 @@
         .btn {
             background-color: #999aa2;
             border-color: #999aa2;
-            width: 3.5rem;
             svg {
                 margin: 0 0 5px 0;
             }
@@ -38,11 +46,9 @@
     }
     
     .burger {
-        display: block;
         position: relative;
         background: $background;
         height: 3.5rem;
-        width: 4rem;
         z-index: 1;
         border-radius: 3px;
         &:hover {

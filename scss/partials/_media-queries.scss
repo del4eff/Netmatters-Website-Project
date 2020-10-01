@@ -105,22 +105,17 @@
     }
 }
 
-@media (min-width: 1200px) {
-    .article-list {
-        .d-lg-none {
-            display: none!important;
-            position: absolute;
-        }
-        .col-lg-6 {            
-            flex: 0 0 50%;
-            max-width: 50%;
-            width: 50%;
-        }
-    }
-}
+// @media (min-width: 1200px) {
+    
+// }
 
 @media (max-width: 1260px) and (min-width: 1200px) {
     .service-list .row .col-xl-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        width: 50%;
+    }
+    .article-list .row .col-xl-4 {
         flex: 0 0 50%;
         max-width: 50%;
         width: 50%;
@@ -138,7 +133,6 @@
     }
     .actions {
         width: 94%;                     //adjusting the actions menu to match the original webpage
-        float: right;
         .input-group {              //giving the serach field a set width after 1260px
             .form-control {
                 display: block;
@@ -155,12 +149,12 @@
         height: auto;
         width: 100%;
     }
+    .article-list .row .col-xl-4 {
+        display: block!important;
+    }
 }
 
 @media (max-width: 1260px) and (min-width: 992px) {
-    .actions {
-        float: right;
-    }
     .input-group {
         width: 56px;
         .form-control {
@@ -172,8 +166,5 @@
     }
     #banner {
         text-align: left;
-    }
-    .service-list .it p::after {
-        content: '\00000A';
     }
 }
