@@ -22,5 +22,13 @@
     .container {
         position: relative;
         top: 33%;
+        .btn {
+            color: #fff;
+            background-color: $web;
+            border-color: $web;
+            > svg {
+            fill: #fff;
+            }
+        }
     }
 }

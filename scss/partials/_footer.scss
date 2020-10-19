@@ -13,12 +13,13 @@ footer {
     ul {
         list-style: none;
         padding: 0;
-        margin: 0;
+        margin: 0 0 30px;
         li {
-            font-size: .8125rem;
-            line-height: 1.375rem;
+            font-size: .87rem;
+            line-height: 1.4rem;
             a {
                 color: #fff;
+                text-transform: initial;
             }
             a:hover {
                 color: #fff;

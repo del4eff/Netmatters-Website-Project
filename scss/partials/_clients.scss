@@ -1,6 +1,6 @@
 // Clients List
 
-.clients .list {
+.clients .container .list {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -9,14 +9,14 @@
         vertical-align: middle;
         padding: 0 20px;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         &:hover {                       //This will hide the greyscale image and display the coloured one
             .description {              //and show the discription and coloured image on top of the image
                 visibility: visible;
                 position: absolute;
-                bottom: 100%;
-                left: -200px;
-                right: -200px;
-                }
+            }
             .greyscale {
                 position: absolute;
                 top: -9999px;
@@ -31,13 +31,14 @@
         .description {                  //Description is hidden by default
             position: absolute;
             visibility: hidden;
+            bottom: 100%;
             .box {
                 background-color: #333645;
                 color: #fff;
                 padding: 20px;
                 font-size: .875rem;
-                max-width: 260px;
-                min-height: 175px;
+                width: 260px;
+                height: 160px;
                 margin: 0 auto 50px;
                 h3 {
                     position: relative;
@@ -66,7 +67,7 @@
                     position: absolute;                  //This will display the arrow pointing to the logos
                     height: 40px;
                     width: 72px;
-                    top: 78%;
+                    top: 74%;
                     left: 50%;
                     margin-left: -36px;
                     z-index: 10;
@@ -80,6 +81,10 @@
                     }
                 }
             }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
         .coloured {                     //Coloured image is hidden by default
             position: absolute;

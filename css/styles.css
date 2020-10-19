@@ -10012,15 +10012,27 @@ header .search-mobile svg {
   cursor: pointer;
 }
 
+/*--- Fonts ---*/
+/* poppins-regular - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v13-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Poppins Regular"), local("Poppins-Regular"), url("../fonts/poppins-v13-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins-v13-latin-regular.woff2") format("woff2"), url("../fonts/poppins-v13-latin-regular.woff") format("woff"), url("../fonts/poppins-v13-latin-regular.ttf") format("truetype"), url("../fonts/poppins-v13-latin-regular.svg#Poppins") format("svg");
+  /* Legacy iOS */
+}
 /*--- Base Styles ---*/
 body {
   font-family: Poppins, sans-serif;
   font-size: 1rem;
   letter-spacing: 0.4px;
   color: #666;
+  line-height: 1.42857143;
 }
 
-*, :before, :after {
+*, ::before, ::after {
   box-sizing: border-box;
 }
 
@@ -10102,6 +10114,16 @@ img {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.container::before,
+.container::after {
+  content: " ";
+  display: table;
+}
+
+.container::after {
+  clear: both;
 }
 
 header .inner {
@@ -10361,6 +10383,14 @@ header .inner {
   position: relative;
   top: 33%;
 }
+#banner .container .btn {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+#banner .container .btn > svg {
+  fill: #fff;
+}
 
 .service-list .col-lg-6 {
   width: 50%;
@@ -10416,6 +10446,7 @@ header .inner {
 .service-list .block .btn-software {
   color: #fff;
   text-transform: uppercase;
+  transition: none;
 }
 .service-list .block:hover h2::after {
   background-color: #fff;
@@ -10447,7 +10478,6 @@ header .inner {
 .service-list .web:hover {
   background-color: #926fb1;
   text-decoration: none;
-  transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
   color: #fff;
 }
 .service-list .web:hover h2 {
@@ -10467,7 +10497,6 @@ header .inner {
 .service-list .it:hover {
   background-color: #4183d7;
   text-decoration: none;
-  transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
   color: #fff;
 }
 .service-list .it:hover h2 {
@@ -10487,7 +10516,6 @@ header .inner {
 .service-list .telecoms:hover {
   background-color: #d64541;
   text-decoration: none;
-  transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
   color: #fff;
 }
 .service-list .telecoms:hover h2 {
@@ -10507,7 +10535,6 @@ header .inner {
 .service-list .bespoke:hover {
   background-color: #67809f;
   text-decoration: none;
-  transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
   color: #fff;
 }
 .service-list .bespoke:hover h2 {
@@ -10527,7 +10554,6 @@ header .inner {
 .service-list .marketing:hover {
   background-color: #2ecc71;
   text-decoration: none;
-  transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
   color: #fff;
 }
 .service-list .marketing:hover h2 {
@@ -10547,7 +10573,6 @@ header .inner {
 .service-list .security:hover {
   background-color: #f62459;
   text-decoration: none;
-  transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
   color: #fff;
 }
 .service-list .security:hover h2 {
@@ -10568,6 +10593,14 @@ header .inner {
 .brand-background {
   background-color: #333645;
   color: #fff;
+  line-height: 1.75rem;
+}
+.brand-background h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin: 0 0 28px;
+  text-transform: uppercase;
+  margin-top: -6px;
 }
 .brand-background img {
   height: 1.5em;
@@ -10628,17 +10661,63 @@ header .inner {
   color: #fff;
   background-color: filter(75%);
 }
-.article-list .item .category {
+.article-list .item .tool-tip {
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 15px;
   color: #fff;
   background-color: #333645;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   padding: 0 10px;
-  line-height: 1.438rem;
+  line-height: 1.25rem;
   text-transform: uppercase;
-  z-index: 1;
+  z-index: 10;
+}
+.article-list .item .tool-tip .description {
+  position: absolute;
+  visibility: hidden;
+  width: 200px;
+  height: 50px;
+  bottom: 140%;
+  right: -60px;
+  opacity: 0;
+}
+.article-list .item .tool-tip .description .box {
+  background-color: #333645;
+  color: #fff;
+  height: 50px;
+  padding: 5px 10px;
+}
+.article-list .item .tool-tip .description .box p {
+  display: inline-block;
+  height: 50px;
+  max-height: 50px;
+  text-align: center;
+  text-transform: initial;
+}
+.article-list .item .tool-tip .description .box .arrow {
+  position: absolute;
+  top: 83%;
+  left: 50%;
+}
+.article-list .item .tool-tip .description .box .arrow:after {
+  content: "";
+  margin: auto;
+  display: inline-block;
+  border-color: #333645 transparent transparent;
+  border-style: solid;
+  border-width: 7px 7px 0;
+}
+.article-list .item .tool-tip:hover .description {
+  visibility: visible;
+  opacity: 90%;
+  transition: opacity 0.3s;
+}
+.article-list .item .tool-tip:hover a {
+  text-decoration: underline;
+}
+.article-list .item .tool-tip a {
+  color: #fff;
 }
 .article-list .item .img-container {
   position: relative;
@@ -10653,7 +10732,6 @@ header .inner {
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 3px 3px 0 0;
-  overflow: hidden;
   position: relative;
   transition: transform 0.2s, opacity 0.2s;
 }
@@ -10679,6 +10757,10 @@ header .inner {
 .article-list .item .block p {
   font-size: 0.8125rem;
   line-height: 1.375rem;
+}
+.article-list .item .block .btn {
+  border: 1px solid transparent;
+  border-radius: 3px;
 }
 .article-list .item .block .post {
   display: table;
@@ -10709,11 +10791,11 @@ header .inner {
 .article-list .telecoms .block .btn:hover {
   background-color: #bc2c28;
 }
-.article-list .telecoms .category,
+.article-list .telecoms .tool-tip,
 .article-list .telecoms .block .btn {
   background-color: #d64541;
 }
-.article-list .web .category,
+.article-list .web .tool-tip,
 .article-list .web .block .btn {
   background-color: #926fb1;
 }
@@ -10724,55 +10806,56 @@ header .inner {
   background-color: #79539a;
 }
 
-.clients .list {
+.clients .container .list {
   display: flex;
   flex-direction: row;
   text-align: center;
 }
-.clients .list .item {
+.clients .container .list .item {
   flex-grow: 1;
   vertical-align: middle;
   padding: 0 20px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.clients .list .item:hover .description {
+.clients .container .list .item:hover .description {
   visibility: visible;
   position: absolute;
-  bottom: 100%;
-  left: -200px;
-  right: -200px;
 }
-.clients .list .item:hover .greyscale {
+.clients .container .list .item:hover .greyscale {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-.clients .list .item:hover .coloured {
+.clients .container .list .item:hover .coloured {
   position: relative;
   top: 0px;
   left: 0px;
 }
-.clients .list .item .description {
+.clients .container .list .item .description {
   position: absolute;
   visibility: hidden;
+  bottom: 100%;
 }
-.clients .list .item .description .box {
+.clients .container .list .item .description .box {
   background-color: #333645;
   color: #fff;
   padding: 20px;
   font-size: 0.875rem;
-  max-width: 260px;
-  min-height: 175px;
+  width: 260px;
+  height: 160px;
   margin: 0 auto 50px;
 }
-.clients .list .item .description .box h3 {
+.clients .container .list .item .description .box h3 {
   position: relative;
   font-size: 1.125rem;
   color: #fff;
   padding-bottom: 17px;
   margin: 0 0 11px;
 }
-.clients .list .item .description .box h3::after {
+.clients .container .list .item .description .box h3::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -10784,20 +10867,20 @@ header .inner {
   display: block;
   background-color: #fff;
 }
-.clients .list .item .description .box p {
+.clients .container .list .item .description .box p {
   font-size: 0.8125rem;
   margin-bottom: 0;
 }
-.clients .list .item .description .box .arrow {
+.clients .container .list .item .description .box .arrow {
   position: absolute;
   height: 40px;
   width: 72px;
-  top: 78%;
+  top: 74%;
   left: 50%;
   margin-left: -36px;
   z-index: 10;
 }
-.clients .list .item .description .box .arrow:after {
+.clients .container .list .item .description .box .arrow:after {
   content: "";
   margin: auto;
   display: inline-block;
@@ -10805,7 +10888,11 @@ header .inner {
   border-style: solid;
   border-width: 35px 36px 0;
 }
-.clients .list .item .coloured {
+.clients .container .list .item img {
+  max-width: 100%;
+  height: auto;
+}
+.clients .container .list .item .coloured {
   position: absolute;
   top: -9999px;
   left: -9999px;
@@ -10825,14 +10912,15 @@ footer h4 {
 footer ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 30px;
 }
 footer ul li {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
+  font-size: 0.87rem;
+  line-height: 1.4rem;
 }
 footer ul li a {
   color: #fff;
+  text-transform: initial;
 }
 footer ul li a:hover {
   color: #fff;
@@ -10881,6 +10969,10 @@ footer .social-media .lin:hover {
   vertical-align: middle;
   padding: 0 20px;
   position: relative;
+}
+.accreditations .list .item img {
+  max-width: 100%;
+  height: auto;
 }
 .accreditations .list .item .coloured {
   position: absolute;
@@ -10941,6 +11033,14 @@ footer .social-media .lin:hover {
   }
 
   .actions .input-group {
+    display: none;
+  }
+
+  .brand-background .row {
+    line-height: 2rem;
+  }
+
+  .clients {
     display: none;
   }
 }

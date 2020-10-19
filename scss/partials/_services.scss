@@ -55,6 +55,7 @@
         .btn-software {
             color: #fff;
             text-transform: uppercase;
+            transition: none;
         }
     }
     .block:hover {                              //Changing the bar colour to white on hover
@@ -101,7 +102,6 @@
     .web:hover {                                     //Setting up the on hover behaviour of individual list items
         background-color: $web;
         text-decoration: none;
-        transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
         color: #fff;
         h2 {
             color: #fff;
@@ -121,7 +121,6 @@
     .it:hover {
         background-color: $it;
         text-decoration: none;
-        transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
         color: #fff;
         h2 {
             color: #fff;
@@ -141,7 +140,6 @@
     .telecoms:hover {
         background-color: $telecoms;
         text-decoration: none;
-        transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
         color: #fff;
         h2 {
             color: #fff;
@@ -161,7 +159,6 @@
     .bespoke:hover {
         background-color: $bespoke;
         text-decoration: none;
-        transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
         color: #fff;
         h2 {
             color: #fff;
@@ -181,7 +178,6 @@
     .marketing:hover {
         background-color: $marketing;
         text-decoration: none;
-        transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
         color: #fff;
         h2 {
             color: #fff;
@@ -201,7 +197,6 @@
     .security:hover {
         background-color: $security;
         text-decoration: none;
-        transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s, border-color 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
         color: #fff;
         h2 {
             color: #fff;

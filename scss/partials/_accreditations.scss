@@ -13,6 +13,10 @@
             vertical-align: middle;
             padding: 0 20px;
             position: relative;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
             .coloured {                     //coloured image is hidden by default
                 position: absolute;
                 top: -9999px;
