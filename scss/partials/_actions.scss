@@ -90,6 +90,8 @@
 
 .inner > .container > .row {
     flex-wrap: nowrap;
+    height: auto;
+    width: 100%;
     .mobile svg {
         fill: #22242e;
     }

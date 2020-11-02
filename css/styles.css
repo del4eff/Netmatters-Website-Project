@@ -9980,6 +9980,8 @@ h3 {
 
 .inner > .container > .row {
   flex-wrap: nowrap;
+  height: auto;
+  width: 100%;
 }
 .inner > .container > .row .mobile svg {
   fill: #22242e;
@@ -10102,11 +10104,7 @@ img {
 
 .main-outer {
   height: 100%;
-  overflow: auto;
-}
-
-#header {
-  visibility: hidden;
+  overflow: hidden auto;
 }
 
 .container {
@@ -10233,7 +10231,7 @@ header .inner {
   font-size: 0.625rem;
   padding-bottom: 1px;
 }
-.main-navigation #pop-out {
+.main-navigation .container ul .pop-out {
   padding: 0;
   margin: 0;
   display: none;
@@ -10244,12 +10242,15 @@ header .inner {
   z-index: 10;
   list-style: none;
 }
-.main-navigation #pop-out > li {
+.main-navigation .container ul .pop-out:hover {
+  display: block;
+}
+.main-navigation .container ul .pop-out > li {
   float: left;
   border: none;
   text-align: left;
 }
-.main-navigation #pop-out > li > a {
+.main-navigation .container ul .pop-out > li > a {
   color: #fff;
   text-transform: uppercase;
   font-size: 0.925rem;
@@ -10258,15 +10259,12 @@ header .inner {
   display: block;
   line-height: 0.5rem;
 }
-.main-navigation #pop-out li:not(:last-child) a:after {
+.main-navigation .container ul .pop-out li:not(:last-child) a:after {
   content: "-";
   padding-left: 1.75rem;
   padding-right: 1.75rem;
 }
-.main-navigation #tab:hover ~ #pop-out {
-  display: block;
-}
-.main-navigation #pop-out:hover {
+.main-navigation .container ul .tab:hover ~ .pop-out {
   display: block;
 }
 .main-navigation .web:hover svg,
@@ -10277,17 +10275,17 @@ header .inner {
 .main-navigation .security:hover svg {
   fill: #fff;
 }
-.main-navigation .web:hover #pop-out::before, .main-navigation .web:hover #pop-out::after,
-.main-navigation .it:hover #pop-out::before,
-.main-navigation .it:hover #pop-out::after,
-.main-navigation .telecoms:hover #pop-out::before,
-.main-navigation .telecoms:hover #pop-out::after,
-.main-navigation .bespoke:hover #pop-out::before,
-.main-navigation .bespoke:hover #pop-out::after,
-.main-navigation .marketing:hover #pop-out::before,
-.main-navigation .marketing:hover #pop-out::after,
-.main-navigation .security:hover #pop-out::before,
-.main-navigation .security:hover #pop-out::after {
+.main-navigation .web:hover .pop-out::before, .main-navigation .web:hover .pop-out::after,
+.main-navigation .it:hover .pop-out::before,
+.main-navigation .it:hover .pop-out::after,
+.main-navigation .telecoms:hover .pop-out::before,
+.main-navigation .telecoms:hover .pop-out::after,
+.main-navigation .bespoke:hover .pop-out::before,
+.main-navigation .bespoke:hover .pop-out::after,
+.main-navigation .marketing:hover .pop-out::before,
+.main-navigation .marketing:hover .pop-out::after,
+.main-navigation .security:hover .pop-out::before,
+.main-navigation .security:hover .pop-out::after {
   content: "";
   width: 125rem;
   display: block;
@@ -10295,68 +10293,68 @@ header .inner {
   top: 0;
   bottom: 0;
 }
-.main-navigation .web:hover #pop-out::before,
-.main-navigation .it:hover #pop-out::before,
-.main-navigation .telecoms:hover #pop-out::before,
-.main-navigation .bespoke:hover #pop-out::before,
-.main-navigation .marketing:hover #pop-out::before,
-.main-navigation .security:hover #pop-out::before {
+.main-navigation .web:hover .pop-out::before,
+.main-navigation .it:hover .pop-out::before,
+.main-navigation .telecoms:hover .pop-out::before,
+.main-navigation .bespoke:hover .pop-out::before,
+.main-navigation .marketing:hover .pop-out::before,
+.main-navigation .security:hover .pop-out::before {
   right: 100%;
 }
-.main-navigation .web:hover #pop-out::after,
-.main-navigation .it:hover #pop-out::after,
-.main-navigation .telecoms:hover #pop-out::after,
-.main-navigation .bespoke:hover #pop-out::after,
-.main-navigation .marketing:hover #pop-out::after,
-.main-navigation .security:hover #pop-out::after {
+.main-navigation .web:hover .pop-out::after,
+.main-navigation .it:hover .pop-out::after,
+.main-navigation .telecoms:hover .pop-out::after,
+.main-navigation .bespoke:hover .pop-out::after,
+.main-navigation .marketing:hover .pop-out::after,
+.main-navigation .security:hover .pop-out::after {
   left: 100%;
 }
 .main-navigation .web:hover {
   background-color: #926fb1;
 }
-.main-navigation .web:hover #pop-out,
-.main-navigation .web:hover #pop-out::before,
-.main-navigation .web:hover #pop-out::after {
+.main-navigation .web:hover .pop-out,
+.main-navigation .web:hover .pop-out::before,
+.main-navigation .web:hover .pop-out::after {
   background-color: #79539a;
 }
 .main-navigation .it:hover {
   background-color: #4183d7;
 }
-.main-navigation .it:hover #pop-out,
-.main-navigation .it:hover #pop-out::before,
-.main-navigation .it:hover #pop-out::after {
+.main-navigation .it:hover .pop-out,
+.main-navigation .it:hover .pop-out::before,
+.main-navigation .it:hover .pop-out::after {
   background-color: #286abd;
 }
 .main-navigation .telecoms:hover {
   background-color: #d64541;
 }
-.main-navigation .telecoms:hover #pop-out,
-.main-navigation .telecoms:hover #pop-out::before,
-.main-navigation .telecoms:hover #pop-out::after {
+.main-navigation .telecoms:hover .pop-out,
+.main-navigation .telecoms:hover .pop-out::before,
+.main-navigation .telecoms:hover .pop-out::after {
   background-color: #bc2c28;
 }
 .main-navigation .bespoke:hover {
   background-color: #67809f;
 }
-.main-navigation .bespoke:hover #pop-out,
-.main-navigation .bespoke:hover #pop-out::before,
-.main-navigation .bespoke:hover #pop-out::after {
+.main-navigation .bespoke:hover .pop-out,
+.main-navigation .bespoke:hover .pop-out::before,
+.main-navigation .bespoke:hover .pop-out::after {
   background-color: #526781;
 }
 .main-navigation .marketing:hover {
   background-color: #2ecc71;
 }
-.main-navigation .marketing:hover #pop-out,
-.main-navigation .marketing:hover #pop-out::before,
-.main-navigation .marketing:hover #pop-out::after {
+.main-navigation .marketing:hover .pop-out,
+.main-navigation .marketing:hover .pop-out::before,
+.main-navigation .marketing:hover .pop-out::after {
   background-color: #25a25a;
 }
 .main-navigation .security:hover {
   background-color: #f62459;
 }
-.main-navigation .security:hover #pop-out,
-.main-navigation .security:hover #pop-out::before,
-.main-navigation .security:hover #pop-out::after {
+.main-navigation .security:hover .pop-out,
+.main-navigation .security:hover .pop-out::before,
+.main-navigation .security:hover .pop-out::after {
   background-color: #de093f;
 }
 
@@ -10368,6 +10366,8 @@ header .inner {
   background-repeat: no-repeat;
   background-size: auto 990px;
   box-shadow: inset 800px 100px 200px 200px rgba(0, 0, 0, 0.8);
+  height: auto;
+  width: 100%;
 }
 #banner h1 {
   text-transform: uppercase;
