@@ -1,0 +1,23 @@
+{
+  "name": "netmatters-website-project-with-js",
+  "version": "0.0.1",
+  "description": "Netmatters JavaScript Reflection",
+  "main": "index.js",
+  "dependencies": {
+    "owl.carousel": "^2.3.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/del4eff/Netmatters-Website-Project-with-JS.git"
+  },
+  "author": "Yanko Delchev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/del4eff/Netmatters-Website-Project-with-JS/issues"
+  },
+  "homepage": "https://github.com/del4eff/Netmatters-Website-Project-with-JS#readme"
+}
